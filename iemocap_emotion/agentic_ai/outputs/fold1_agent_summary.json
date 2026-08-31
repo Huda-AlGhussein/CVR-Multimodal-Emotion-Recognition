@@ -1,0 +1,86 @@
+{
+  "fold": 1,
+  "n_test_utterances": 1097,
+  "classification": {
+    "macro_f1": 0.7475621270813946,
+    "weighted_f1": 0.7249301121625726,
+    "weighted_acc": 0.7256153144940748,
+    "unweighted_acc": 0.7319146350299223,
+    "precision_per_class": {
+      "anger": 0.8571428571428571,
+      "fear": 1.0,
+      "joy": 0.7457044673539519,
+      "neutral": 0.7,
+      "sadness": 0.6201550387596899
+    },
+    "recall_per_class": {
+      "anger": 0.7860262008733624,
+      "fear": 0.6666666666666666,
+      "joy": 0.7805755395683454,
+      "neutral": 0.6015625,
+      "sadness": 0.8247422680412371
+    },
+    "f1_per_class": {
+      "anger": 0.8200455580865603,
+      "fear": 0.8,
+      "joy": 0.7627416520210897,
+      "neutral": 0.6470588235294118,
+      "sadness": 0.7079646017699115
+    },
+    "confusion_matrix": [
+      [
+        180,
+        0,
+        13,
+        30,
+        6
+      ],
+      [
+        0,
+        8,
+        0,
+        1,
+        3
+      ],
+      [
+        8,
+        0,
+        217,
+        48,
+        5
+      ],
+      [
+        17,
+        0,
+        52,
+        231,
+        84
+      ],
+      [
+        5,
+        0,
+        9,
+        20,
+        160
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n       anger       0.86      0.79      0.82       229\n        fear       1.00      0.67      0.80        12\n         joy       0.75      0.78      0.76       278\n     neutral       0.70      0.60      0.65       384\n     sadness       0.62      0.82      0.71       194\n\n    accuracy                           0.73      1097\n   macro avg       0.78      0.73      0.75      1097\nweighted avg       0.73      0.73      0.72      1097\n"
+  },
+  "retrieval": {
+    "retrieval_agreement_overall": 0.6652689152233363,
+    "retrieval_agreement_when_correct": 0.8412060301507537,
+    "retrieval_agreement_when_incorrect": 0.19999999999999998,
+    "retrieval_rescue_rate": 0.4950166112956811,
+    "n_wrong": 301,
+    "n_rescued": 149,
+    "retrieval_agreement_per_class": {
+      "neutral": 0.4817708333333333,
+      "anger": 0.7606986899563318,
+      "sadness": 0.7494845360824741,
+      "joy": 0.7942446043165468,
+      "fear": 0.3666666666666667
+    }
+  },
+  "baseline_macro_f1": 0.7483140653121064,
+  "delta_macro_f1": -0.0007519382307118461
+}

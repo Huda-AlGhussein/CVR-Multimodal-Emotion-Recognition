@@ -1,0 +1,19 @@
+==============================================================================
+CLASS-CONDITIONAL ECE  (10 equal-width bins, MELD test set)
+==============================================================================
+
+High-risk classes: anger, fear
+Low-risk classes:  neutral, joy, sadness
+
+Model        HighRisk ECE    LowRisk ECE   Delta(H-L)
+-----------------------------------------------------
+text               0.0916         0.1110      -0.0194
+audio              0.0956         0.1534      -0.0579
+fusion             0.0937         0.1255      -0.0318
+
+Per-class ECE breakdown:
+------------------------------------------------------------------------------
+Model          anger      fear       joy   neutral   sadness
+text          0.0256    0.1577    0.0455    0.2538    0.0336
+audio         0.0450    0.1461    0.0299    0.3151    0.1153
+fusion        0.0367    0.1507    0.0301    0.2726    0.0738

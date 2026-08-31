@@ -1,0 +1,173 @@
+# ============================================================================
+# CVR multimodal emotion recognition — .gitignore
+# Private research-handover repository.
+#
+# Policy: commit ALL source code, configs, preprocessing/training/evaluation
+# scripts, agentic-AI code, and the small final results/metrics/figures.
+# EXCLUDE raw datasets, model checkpoints, downloaded pretrained models,
+# regenerable caches, virtual environments, and secrets.
+# ============================================================================
+
+# ---------------------------------------------------------------------------
+# Raw datasets & dataset archives  (obtain separately — see README)
+# ---------------------------------------------------------------------------
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.7z
+
+# IEMOCAP raw corpus (place locally, never commit)
+iemocap_emotion/data_splits/data/
+**/IEMOCAP_full_release/
+
+# MELD raw corpus (archives + extracted audio/video/annotation dumps)
+iemocap_emotion/src/MELD.Raw/
+**/MELD.Raw/
+**/MELD.Raw.tar.gz
+
+# Extracted / preprocessed MELD audio (regenerable via meld_preprocessing.py)
+iemocap_emotion/data_splits/meld_audio/
+
+# ---------------------------------------------------------------------------
+# Dataset-derived metadata / split CSVs that embed licence-restricted
+# transcript text (IEMOCAP & MELD). Regenerated from the original corpora by
+# the preprocessing scripts — see README §5. NOT redistributable; excluded
+# even though the repo is private.
+# ---------------------------------------------------------------------------
+iemocap_emotion/src/data_splits/iemocap_metadata.csv
+iemocap_emotion/data_splits/meld/
+# Unfinished study artefacts that also embed transcript text + local paths
+# (not required to reproduce any completed experiment).
+iemocap_emotion/agentic_ai/outputs/hitl_pilot_utterances.csv
+iemocap_emotion/agentic_ai/outputs/case_study_utterances.csv
+
+# ---------------------------------------------------------------------------
+# Model checkpoints / trained weights  (regenerable via train.py)
+# ---------------------------------------------------------------------------
+*.pt
+*.pth
+*.bin
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.pkl
+*.joblib
+iemocap_emotion/checkpoints/
+iemocap_emotion/src/checkpoints/
+
+# ---------------------------------------------------------------------------
+# Hugging Face / torch caches & downloaded pretrained models
+# ---------------------------------------------------------------------------
+**/.cache/
+hf_cache/
+huggingface/
+transformers_cache/
+$HF_HOME/
+.torch/
+*.msgpack
+
+# ---------------------------------------------------------------------------
+# Regenerable feature / retrieval caches
+# ---------------------------------------------------------------------------
+iemocap_emotion/src/data_splits/audio_cache/
+**/audio_cache/
+iemocap_emotion/agentic_ai/cache/
+*.npz
+
+# ---------------------------------------------------------------------------
+# Virtual environments
+# ---------------------------------------------------------------------------
+venv/
+.venv/
+env/
+ENV/
+.env/
+virtualenv/
+conda-env/
+*.conda
+
+# ---------------------------------------------------------------------------
+# Python caches / build artifacts
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# ---------------------------------------------------------------------------
+# Credentials / secrets / tokens
+# ---------------------------------------------------------------------------
+.env
+.env.*
+*.env
+!.env.example
+secrets.*
+*secret*
+*.key
+*.pem
+*.p12
+credentials*.json
+token*.json
+.hf_token
+.huggingface/
+aws.json
+.aws/
+*.credentials
+
+# ---------------------------------------------------------------------------
+# Temporary experiment / scratch files
+# ---------------------------------------------------------------------------
+tmp/
+temp/
+scratch/
+scratchpad/
+*.tmp
+*.bak
+*.old
+*.orig
+*.log.*
+nohup.out
+slurm-*.out
+wandb/
+mlruns/
+lightning_logs/
+runs/
+
+# ---------------------------------------------------------------------------
+# Large / regenerable generated media (keep only curated final figures)
+# ---------------------------------------------------------------------------
+*.wav
+*.flac
+*.mp3
+*.mp4
+*.avi
+*.mov
+*.npy
+# Keep the tiny (<1 KB) saved confusion matrices that ARE the reported results
+!**/*confusion_matrix.npy
+
+# ---------------------------------------------------------------------------
+# OS / editor cruft
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.sublime-*

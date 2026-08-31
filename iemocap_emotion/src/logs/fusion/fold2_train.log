@@ -1,0 +1,97 @@
+2026-07-01 16:56:22 | fold2 | INFO: 
+============================================================
+2026-07-01 16:56:22 | fold2 | INFO: FOLD 2 | Model: fusion
+2026-07-01 16:56:22 | fold2 | INFO: ============================================================
+2026-07-01 16:56:22 | fold2 | INFO:   Split sizes: train=3386 | val=1153 | test=1032
+2026-07-01 16:56:22 | fold2 | INFO:   Class weights: [0.9327823519706726, 5.0, 0.6619746088981628, 0.6600390076637268, 1.1635738611221313]
+2026-07-01 16:56:27 | fold2 | INFO:   Batches: train=212 | val=73 | test=65
+2026-07-01 16:56:30 | fold2 | INFO:   Trainable params: 1,445,393 (0.66% of total)
+2026-07-01 16:56:30 | fold2 | INFO:   AMP: enabled
+2026-07-01 16:56:30 | fold2 | INFO: 
+  Starting training for up to 30 epochs...
+2026-07-01 16:57:11 | fold2 | INFO:   Batch 50/212 | loss=1.8489 | data=16.1s  fwd=11.2s  bwd=13.1s
+2026-07-01 16:57:34 | fold2 | INFO:   Batch 100/212 | loss=1.7620 | data=16.1s  fwd=21.8s  bwd=25.8s
+2026-07-01 16:57:58 | fold2 | INFO:   Batch 150/212 | loss=1.2816 | data=16.1s  fwd=32.2s  bwd=39.0s
+2026-07-01 16:58:21 | fold2 | INFO:   Batch 200/212 | loss=1.3795 | data=16.2s  fwd=42.5s  bwd=52.1s
+2026-07-01 16:58:58 | fold2 | INFO:   Epoch   1/30 | total=148s | data=16s  fwd=45s  bwd=55s  val=31s || train_loss=1.6081  train_MacF1=0.3713 | [val] MacF1=0.4836 | WtF1=0.6009 | WA=61.23% | UA=49.88%
+2026-07-01 16:58:59 | fold2 | INFO:   New best checkpoint saved. Val MacF1=0.4836
+2026-07-01 16:59:23 | fold2 | INFO:   Batch 50/212 | loss=1.0831 | data=0.2s  fwd=10.7s  bwd=12.8s
+2026-07-01 16:59:47 | fold2 | INFO:   Batch 100/212 | loss=1.3613 | data=0.2s  fwd=21.5s  bwd=25.8s
+2026-07-01 17:00:10 | fold2 | INFO:   Batch 150/212 | loss=1.2356 | data=0.2s  fwd=32.1s  bwd=38.4s
+2026-07-01 17:00:34 | fold2 | INFO:   Batch 200/212 | loss=1.2966 | data=0.3s  fwd=42.9s  bwd=51.0s
+2026-07-01 17:00:54 | fold2 | INFO:   Epoch   2/30 | total=115s | data=0s  fwd=46s  bwd=54s  val=15s || train_loss=1.2983  train_MacF1=0.5541 | [val] MacF1=0.5508 | WtF1=0.6321 | WA=64.44% | UA=62.12%
+2026-07-01 17:00:55 | fold2 | INFO:   New best checkpoint saved. Val MacF1=0.5508
+2026-07-01 17:01:19 | fold2 | INFO:   Batch 50/212 | loss=1.1545 | data=0.1s  fwd=10.9s  bwd=12.9s
+2026-07-01 17:01:43 | fold2 | INFO:   Batch 100/212 | loss=1.1699 | data=0.1s  fwd=21.3s  bwd=25.7s
+2026-07-01 17:02:06 | fold2 | INFO:   Batch 150/212 | loss=1.1597 | data=0.2s  fwd=32.1s  bwd=38.5s
+2026-07-01 17:02:30 | fold2 | INFO:   Batch 200/212 | loss=1.2517 | data=0.2s  fwd=42.9s  bwd=51.3s
+2026-07-01 17:02:50 | fold2 | INFO:   Epoch   3/30 | total=115s | data=0s  fwd=45s  bwd=54s  val=14s || train_loss=1.2069  train_MacF1=0.6280 | [val] MacF1=0.4874 | WtF1=0.6074 | WA=61.67% | UA=50.66%
+2026-07-01 17:02:50 | fold2 | INFO:   No improvement. Patience: 1/5
+2026-07-01 17:03:14 | fold2 | INFO:   Batch 50/212 | loss=1.1631 | data=0.1s  fwd=10.8s  bwd=13.0s
+2026-07-01 17:03:38 | fold2 | INFO:   Batch 100/212 | loss=0.9629 | data=0.1s  fwd=21.6s  bwd=25.9s
+2026-07-01 17:04:01 | fold2 | INFO:   Batch 150/212 | loss=0.8779 | data=0.2s  fwd=32.2s  bwd=39.0s
+2026-07-01 17:04:25 | fold2 | INFO:   Batch 200/212 | loss=1.1282 | data=0.2s  fwd=43.0s  bwd=51.9s
+2026-07-01 17:04:45 | fold2 | INFO:   Epoch   4/30 | total=115s | data=0s  fwd=46s  bwd=55s  val=14s || train_loss=1.1079  train_MacF1=0.7014 | [val] MacF1=0.5828 | WtF1=0.7011 | WA=69.73% | UA=76.29%
+2026-07-01 17:04:47 | fold2 | INFO:   New best checkpoint saved. Val MacF1=0.5828
+2026-07-01 17:05:10 | fold2 | INFO:   Batch 50/212 | loss=1.1643 | data=0.1s  fwd=10.8s  bwd=12.8s
+2026-07-01 17:05:34 | fold2 | INFO:   Batch 100/212 | loss=1.2763 | data=0.2s  fwd=21.5s  bwd=25.7s
+2026-07-01 17:05:58 | fold2 | INFO:   Batch 150/212 | loss=0.9588 | data=0.2s  fwd=32.0s  bwd=38.6s
+2026-07-01 17:06:21 | fold2 | INFO:   Batch 200/212 | loss=1.1709 | data=0.2s  fwd=42.9s  bwd=51.2s
+2026-07-01 17:06:41 | fold2 | INFO:   Epoch   5/30 | total=114s | data=0s  fwd=46s  bwd=54s  val=14s || train_loss=1.0356  train_MacF1=0.7601 | [val] MacF1=0.6208 | WtF1=0.7013 | WA=70.60% | UA=77.30%
+2026-07-01 17:06:43 | fold2 | INFO:   New best checkpoint saved. Val MacF1=0.6208
+2026-07-01 17:07:07 | fold2 | INFO:   Batch 50/212 | loss=1.0677 | data=0.1s  fwd=11.6s  bwd=13.0s
+2026-07-01 17:07:31 | fold2 | INFO:   Batch 100/212 | loss=0.9848 | data=0.1s  fwd=22.4s  bwd=25.9s
+2026-07-01 17:07:55 | fold2 | INFO:   Batch 150/212 | loss=1.0330 | data=0.2s  fwd=32.8s  bwd=39.0s
+2026-07-01 17:08:19 | fold2 | INFO:   Batch 200/212 | loss=0.9066 | data=0.2s  fwd=43.5s  bwd=52.2s
+2026-07-01 17:08:38 | fold2 | INFO:   Epoch   6/30 | total=116s | data=0s  fwd=46s  bwd=55s  val=14s || train_loss=0.9892  train_MacF1=0.7859 | [val] MacF1=0.6580 | WtF1=0.7276 | WA=73.29% | UA=78.92%
+2026-07-01 17:08:40 | fold2 | INFO:   New best checkpoint saved. Val MacF1=0.6580
+2026-07-01 17:09:03 | fold2 | INFO:   Batch 50/212 | loss=0.7231 | data=0.1s  fwd=10.6s  bwd=12.5s
+2026-07-01 17:09:27 | fold2 | INFO:   Batch 100/212 | loss=0.7127 | data=0.2s  fwd=21.2s  bwd=25.4s
+2026-07-01 17:09:50 | fold2 | INFO:   Batch 150/212 | loss=1.1048 | data=0.2s  fwd=31.9s  bwd=38.3s
+2026-07-01 17:10:14 | fold2 | INFO:   Batch 200/212 | loss=0.8652 | data=0.2s  fwd=42.5s  bwd=50.8s
+2026-07-01 17:10:34 | fold2 | INFO:   Epoch   7/30 | total=114s | data=0s  fwd=45s  bwd=54s  val=14s || train_loss=0.9465  train_MacF1=0.8228 | [val] MacF1=0.6100 | WtF1=0.7268 | WA=72.16% | UA=78.26%
+2026-07-01 17:10:34 | fold2 | INFO:   No improvement. Patience: 1/5
+2026-07-01 17:10:58 | fold2 | INFO:   Batch 50/212 | loss=0.6645 | data=0.1s  fwd=10.8s  bwd=13.1s
+2026-07-01 17:11:22 | fold2 | INFO:   Batch 100/212 | loss=1.0237 | data=0.2s  fwd=21.7s  bwd=25.9s
+2026-07-01 17:11:46 | fold2 | INFO:   Batch 150/212 | loss=0.9015 | data=0.2s  fwd=32.5s  bwd=38.7s
+2026-07-01 17:12:10 | fold2 | INFO:   Batch 200/212 | loss=0.8467 | data=0.3s  fwd=43.4s  bwd=51.5s
+2026-07-01 17:12:30 | fold2 | INFO:   Epoch   8/30 | total=115s | data=0s  fwd=46s  bwd=55s  val=15s || train_loss=0.9239  train_MacF1=0.8310 | [val] MacF1=0.5995 | WtF1=0.7129 | WA=71.03% | UA=77.29%
+2026-07-01 17:12:30 | fold2 | INFO:   No improvement. Patience: 2/5
+2026-07-01 17:12:54 | fold2 | INFO:   Batch 50/212 | loss=0.9151 | data=0.1s  fwd=10.7s  bwd=13.1s
+2026-07-01 17:13:18 | fold2 | INFO:   Batch 100/212 | loss=0.8432 | data=0.1s  fwd=21.5s  bwd=26.1s
+2026-07-01 17:13:41 | fold2 | INFO:   Batch 150/212 | loss=0.9104 | data=0.2s  fwd=32.3s  bwd=38.9s
+2026-07-01 17:14:05 | fold2 | INFO:   Batch 200/212 | loss=0.8555 | data=0.2s  fwd=42.6s  bwd=51.8s
+2026-07-01 17:14:24 | fold2 | INFO:   Epoch   9/30 | total=115s | data=0s  fwd=45s  bwd=55s  val=14s || train_loss=0.9036  train_MacF1=0.8319 | [val] MacF1=0.6367 | WtF1=0.7253 | WA=72.33% | UA=78.33%
+2026-07-01 17:14:24 | fold2 | INFO:   No improvement. Patience: 3/5
+2026-07-01 17:14:48 | fold2 | INFO:   Batch 50/212 | loss=0.9512 | data=0.1s  fwd=10.9s  bwd=12.9s
+2026-07-01 17:15:12 | fold2 | INFO:   Batch 100/212 | loss=0.9225 | data=0.1s  fwd=21.6s  bwd=26.0s
+2026-07-01 17:15:35 | fold2 | INFO:   Batch 150/212 | loss=0.7508 | data=0.2s  fwd=32.2s  bwd=38.6s
+2026-07-01 17:15:59 | fold2 | INFO:   Batch 200/212 | loss=0.7681 | data=0.2s  fwd=43.0s  bwd=51.1s
+2026-07-01 17:16:19 | fold2 | INFO:   Epoch  10/30 | total=115s | data=0s  fwd=46s  bwd=54s  val=14s || train_loss=0.8795  train_MacF1=0.8686 | [val] MacF1=0.6228 | WtF1=0.7083 | WA=70.60% | UA=77.16%
+2026-07-01 17:16:19 | fold2 | INFO:   No improvement. Patience: 4/5
+2026-07-01 17:16:43 | fold2 | INFO:   Batch 50/212 | loss=0.8015 | data=0.1s  fwd=10.9s  bwd=12.6s
+2026-07-01 17:17:07 | fold2 | INFO:   Batch 100/212 | loss=0.8014 | data=0.1s  fwd=22.5s  bwd=25.4s
+2026-07-01 17:17:30 | fold2 | INFO:   Batch 150/212 | loss=0.8378 | data=0.2s  fwd=32.8s  bwd=37.9s
+2026-07-01 17:17:54 | fold2 | INFO:   Batch 200/212 | loss=0.6201 | data=0.2s  fwd=43.4s  bwd=51.0s
+2026-07-01 17:18:13 | fold2 | INFO:   Epoch  11/30 | total=114s | data=0s  fwd=46s  bwd=54s  val=14s || train_loss=0.8603  train_MacF1=0.8727 | [val] MacF1=0.6403 | WtF1=0.7442 | WA=74.24% | UA=79.47%
+2026-07-01 17:18:13 | fold2 | INFO:   No improvement. Patience: 5/5
+2026-07-01 17:18:13 | fold2 | INFO:   Early stopping triggered at epoch 11.
+2026-07-01 17:18:13 | fold2 | INFO: 
+  Best validation MacF1: 0.6580 at epoch 6
+2026-07-01 17:18:13 | fold2 | INFO:   Loading best checkpoint from: ./checkpoints\fusion\fold2_best.pt
+2026-07-01 17:18:44 | fold2 | INFO: 
+  TEST RESULTS: [test] MacF1=0.7047 | WtF1=0.7373 | WA=74.42% | UA=75.76%
+2026-07-01 17:18:44 | fold2 | INFO: 
+              precision    recall  f1-score   support
+
+       anger       0.72      0.84      0.77       137
+        fear       0.43      0.67      0.52         9
+         joy       0.73      0.83      0.78       327
+     neutral       0.88      0.54      0.67       362
+     sadness       0.69      0.91      0.78       197
+
+    accuracy                           0.74      1032
+   macro avg       0.69      0.76      0.70      1032
+weighted avg       0.77      0.74      0.74      1032
+
+2026-07-01 17:18:44 | fold2 | INFO:   Results saved to: ./outputs\fusion

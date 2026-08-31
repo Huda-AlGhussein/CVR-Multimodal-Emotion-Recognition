@@ -1,0 +1,34 @@
+# requirements.txt
+# ─────────────────────────────────────────────────────────────────────────────
+# Python packages required for the IEMOCAP emotion recognition pipeline.
+# Install with: pip install -r requirements.txt
+#
+# Tested with Python 3.10. Python 3.9+ required.
+# GPU: NVIDIA A100 or equivalent recommended. Pipeline will run on CPU
+# but audio models will be extremely slow (30+ min/epoch).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Core deep learning ────────────────────────────────────────────────────────
+torch>=2.1.0               # PyTorch — main deep learning framework
+torchaudio>=2.1.0          # Audio loading and resampling (torchaudio.load, Resample)
+
+# ── HuggingFace ecosystem ─────────────────────────────────────────────────────
+transformers>=4.38.0       # RoBERTa, WavLM model classes and tokenizers
+peft>=0.10.0               # LoRA implementation (LoraConfig, get_peft_model)
+accelerate>=0.27.0         # Required by some HuggingFace training utilities
+
+# ── Data handling ──────────────────────────────────────────────────────────────
+pandas>=2.0.0              # DataFrame for metadata management
+numpy>=1.26.0              # Numerical operations, array handling
+
+# ── Metrics ───────────────────────────────────────────────────────────────────
+scikit-learn>=1.4.0        # F1 score, confusion matrix, classification_report
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm>=4.66.0               # Progress bars (optional; not used in current code)
+
+# ── Optional: for reproducibility verification ───────────────────────────────
+# matplotlib>=3.8.0        # Confusion matrix heatmap (add later for XAI)
+# seaborn>=0.13.0          # Better confusion matrix visualisation
+# optuna>=3.5.0            # Bayesian HPO (Section 5 of blueprint)
+# mlflow>=2.10.0           # Experiment tracking (optional)

@@ -1,0 +1,226 @@
+2026-07-13 16:41:49 | meld | INFO: 
+============================================================
+2026-07-13 16:41:49 | meld | INFO: MELD NATIVE SPLIT | Model: audio
+2026-07-13 16:41:49 | meld | INFO: ============================================================
+2026-07-13 16:41:49 | meld | INFO:   Split sizes: train=8513 | val=937 | test=2261
+2026-07-13 16:41:49 | meld | WARNING:   Removed 1 train rows with missing audio.
+2026-07-13 16:41:49 | meld | INFO:   [DEBUG] Subsampled to 64 per split.
+2026-07-13 16:41:49 | meld | INFO:   Class weights: [3.200000047683716, 5.0, 1.2799999713897705, 0.3199999928474426, 1.600000023841858]
+2026-07-13 16:41:49 | meld | INFO:   Batches: train=4 | val=4 | test=4
+2026-07-13 16:41:52 | meld | INFO:   Trainable params: 493,585 (0.52% of total)
+2026-07-13 16:41:52 | meld | INFO:   AMP: enabled
+2026-07-13 16:41:52 | meld | INFO: 
+  Starting training for up to 3 epochs...
+2026-07-13 16:42:06 | meld | INFO:   Epoch   1/3 | total=14s | data=6s  fwd=1s  bwd=1s  val=6s || train_loss=2.0413  train_MacF1=0.0718 | [val] MacF1=0.1350 | WtF1=0.1401 | WA=21.88% | UA=28.10%
+2026-07-13 16:42:06 | meld | INFO:   New best checkpoint saved. Val MacF1=0.1350
+2026-07-13 16:42:09 | meld | INFO:   Epoch   2/3 | total=2s | data=0s  fwd=1s  bwd=1s  val=1s || train_loss=1.9540  train_MacF1=0.0928 | [val] MacF1=0.1350 | WtF1=0.1401 | WA=21.88% | UA=28.10%
+2026-07-13 16:42:09 | meld | INFO:   No improvement. Patience: 1/5
+2026-07-13 16:42:11 | meld | INFO:   Epoch   3/3 | total=2s | data=0s  fwd=1s  bwd=1s  val=1s || train_loss=1.9751  train_MacF1=0.1515 | [val] MacF1=0.1350 | WtF1=0.1401 | WA=21.88% | UA=28.10%
+2026-07-13 16:42:11 | meld | INFO:   No improvement. Patience: 2/5
+2026-07-13 16:42:11 | meld | INFO: 
+  Best validation MacF1: 0.1350 at epoch 1
+2026-07-13 16:42:11 | meld | INFO:   Loading best checkpoint from: ./checkpoints\audio\meld_best.pt
+2026-07-13 16:42:17 | meld | INFO: 
+  TEST RESULTS: [test] MacF1=0.0825 | WtF1=0.1109 | WA=20.31% | UA=21.11%
+2026-07-13 16:42:17 | meld | INFO: 
+              precision    recall  f1-score   support
+
+       anger       0.00      0.00      0.00         8
+        fear       0.00      0.00      0.00         3
+         joy       0.18      1.00      0.31        11
+     neutral       0.67      0.06      0.10        36
+     sadness       0.00      0.00      0.00         6
+
+    accuracy                           0.20        64
+   macro avg       0.17      0.21      0.08        64
+weighted avg       0.41      0.20      0.11        64
+
+2026-07-13 16:42:17 | meld | INFO:   Results saved to: ./outputs\audio
+2026-07-13 16:44:08 | meld | INFO: 
+============================================================
+2026-07-13 16:44:08 | meld | INFO: MELD NATIVE SPLIT | Model: audio
+2026-07-13 16:44:08 | meld | INFO: ============================================================
+2026-07-13 16:44:08 | meld | INFO:   Split sizes: train=8513 | val=937 | test=2261
+2026-07-13 16:44:08 | meld | WARNING:   Removed 1 train rows with missing audio.
+2026-07-13 16:44:08 | meld | INFO:   Class weights: [1.53507661819458, 5.0, 0.9767068028450012, 0.3615204989910126, 2.492532968521118]
+2026-07-13 16:44:08 | meld | INFO:   Batches: train=532 | val=59 | test=142
+2026-07-13 16:44:11 | meld | INFO:   Trainable params: 493,585 (0.52% of total)
+2026-07-13 16:44:11 | meld | INFO:   AMP: enabled
+2026-07-13 16:44:11 | meld | INFO: 
+  Starting training for up to 30 epochs...
+2026-07-13 16:44:40 | meld | INFO:   Batch 50/532 | loss=1.6656 | data=10.3s  fwd=8.0s  bwd=11.0s
+2026-07-13 16:44:58 | meld | INFO:   Batch 100/532 | loss=1.8146 | data=10.3s  fwd=15.3s  bwd=21.9s
+2026-07-13 16:45:16 | meld | INFO:   Batch 150/532 | loss=2.2071 | data=10.3s  fwd=22.6s  bwd=32.7s
+2026-07-13 16:45:35 | meld | INFO:   Batch 200/532 | loss=2.0405 | data=10.3s  fwd=30.0s  bwd=43.6s
+2026-07-13 16:45:53 | meld | INFO:   Batch 250/532 | loss=2.1086 | data=10.3s  fwd=37.4s  bwd=54.6s
+2026-07-13 16:46:11 | meld | INFO:   Batch 300/532 | loss=1.8664 | data=10.3s  fwd=44.8s  bwd=65.4s
+2026-07-13 16:46:30 | meld | INFO:   Batch 350/532 | loss=1.7493 | data=10.4s  fwd=52.2s  bwd=76.4s
+2026-07-13 16:46:48 | meld | INFO:   Batch 400/532 | loss=1.8016 | data=10.4s  fwd=59.5s  bwd=87.2s
+2026-07-13 16:47:06 | meld | INFO:   Batch 450/532 | loss=1.7605 | data=10.4s  fwd=66.9s  bwd=98.1s
+2026-07-13 16:47:24 | meld | INFO:   Batch 500/532 | loss=1.6419 | data=10.4s  fwd=74.3s  bwd=109.0s
+2026-07-13 16:47:56 | meld | INFO:   Epoch   1/30 | total=225s | data=10s  fwd=79s  bwd=116s  val=20s || train_loss=1.8142  train_MacF1=0.1981 | [val] MacF1=0.2082 | WtF1=0.1706 | WA=16.56% | UA=28.68%
+2026-07-13 16:47:56 | meld | INFO:   New best checkpoint saved. Val MacF1=0.2082
+2026-07-13 16:48:15 | meld | INFO:   Batch 50/532 | loss=1.7796 | data=0.0s  fwd=7.4s  bwd=11.0s
+2026-07-13 16:48:33 | meld | INFO:   Batch 100/532 | loss=1.7409 | data=0.1s  fwd=14.9s  bwd=22.0s
+2026-07-13 16:48:52 | meld | INFO:   Batch 150/532 | loss=1.9467 | data=0.1s  fwd=22.3s  bwd=33.0s
+2026-07-13 16:49:10 | meld | INFO:   Batch 200/532 | loss=1.8913 | data=0.1s  fwd=29.7s  bwd=43.9s
+2026-07-13 16:49:28 | meld | INFO:   Batch 250/532 | loss=1.5356 | data=0.1s  fwd=37.1s  bwd=54.7s
+2026-07-13 16:49:47 | meld | INFO:   Batch 300/532 | loss=1.6108 | data=0.1s  fwd=44.5s  bwd=65.7s
+2026-07-13 16:50:05 | meld | INFO:   Batch 350/532 | loss=1.7037 | data=0.1s  fwd=52.0s  bwd=76.6s
+2026-07-13 16:50:23 | meld | INFO:   Batch 400/532 | loss=1.7108 | data=0.1s  fwd=59.4s  bwd=87.5s
+2026-07-13 16:50:41 | meld | INFO:   Batch 450/532 | loss=1.7711 | data=0.1s  fwd=66.7s  bwd=98.3s
+2026-07-13 16:51:00 | meld | INFO:   Batch 500/532 | loss=1.8806 | data=0.1s  fwd=74.0s  bwd=109.1s
+2026-07-13 16:51:20 | meld | INFO:   Epoch   2/30 | total=204s | data=0s  fwd=79s  bwd=116s  val=9s || train_loss=1.7628  train_MacF1=0.2450 | [val] MacF1=0.3043 | WtF1=0.3301 | WA=32.69% | UA=40.42%
+2026-07-13 16:51:20 | meld | INFO:   New best checkpoint saved. Val MacF1=0.3043
+2026-07-13 16:51:39 | meld | INFO:   Batch 50/532 | loss=1.6680 | data=0.0s  fwd=7.4s  bwd=10.9s
+2026-07-13 16:51:57 | meld | INFO:   Batch 100/532 | loss=1.4913 | data=0.1s  fwd=14.8s  bwd=21.8s
+2026-07-13 16:52:15 | meld | INFO:   Batch 150/532 | loss=1.9225 | data=0.1s  fwd=22.1s  bwd=32.6s
+2026-07-13 16:52:33 | meld | INFO:   Batch 200/532 | loss=2.1355 | data=0.1s  fwd=29.4s  bwd=43.5s
+2026-07-13 16:52:52 | meld | INFO:   Batch 250/532 | loss=1.5827 | data=0.1s  fwd=36.9s  bwd=54.4s
+2026-07-13 16:53:10 | meld | INFO:   Batch 300/532 | loss=1.6094 | data=0.1s  fwd=44.2s  bwd=65.3s
+2026-07-13 16:53:28 | meld | INFO:   Batch 350/532 | loss=1.5781 | data=0.1s  fwd=51.6s  bwd=76.2s
+2026-07-13 16:53:47 | meld | INFO:   Batch 400/532 | loss=1.8412 | data=0.1s  fwd=59.0s  bwd=87.1s
+2026-07-13 16:54:05 | meld | INFO:   Batch 450/532 | loss=1.7959 | data=0.1s  fwd=66.4s  bwd=98.0s
+2026-07-13 16:54:23 | meld | INFO:   Batch 500/532 | loss=1.7171 | data=0.1s  fwd=73.9s  bwd=108.9s
+2026-07-13 16:54:44 | meld | INFO:   Epoch   3/30 | total=204s | data=0s  fwd=79s  bwd=116s  val=9s || train_loss=1.7391  train_MacF1=0.2711 | [val] MacF1=0.2894 | WtF1=0.3507 | WA=30.98% | UA=35.28%
+2026-07-13 16:54:44 | meld | INFO:   No improvement. Patience: 1/5
+2026-07-13 16:55:02 | meld | INFO:   Batch 50/532 | loss=1.5999 | data=0.1s  fwd=7.4s  bwd=10.9s
+2026-07-13 16:55:21 | meld | INFO:   Batch 100/532 | loss=1.5297 | data=0.1s  fwd=14.8s  bwd=21.8s
+2026-07-13 16:55:39 | meld | INFO:   Batch 150/532 | loss=1.7256 | data=0.1s  fwd=22.2s  bwd=32.7s
+2026-07-13 16:55:57 | meld | INFO:   Batch 200/532 | loss=1.7452 | data=0.1s  fwd=29.6s  bwd=43.7s
+2026-07-13 16:56:16 | meld | INFO:   Batch 250/532 | loss=1.4650 | data=0.1s  fwd=37.0s  bwd=54.6s
+2026-07-13 16:56:34 | meld | INFO:   Batch 300/532 | loss=1.5577 | data=0.1s  fwd=44.5s  bwd=65.6s
+2026-07-13 16:56:52 | meld | INFO:   Batch 350/532 | loss=1.5232 | data=0.1s  fwd=51.9s  bwd=76.5s
+2026-07-13 16:57:11 | meld | INFO:   Batch 400/532 | loss=1.7840 | data=0.1s  fwd=59.2s  bwd=87.3s
+2026-07-13 16:57:29 | meld | INFO:   Batch 450/532 | loss=1.6263 | data=0.1s  fwd=66.6s  bwd=98.2s
+2026-07-13 16:57:47 | meld | INFO:   Batch 500/532 | loss=1.7825 | data=0.1s  fwd=74.0s  bwd=109.1s
+2026-07-13 16:58:08 | meld | INFO:   Epoch   4/30 | total=204s | data=0s  fwd=79s  bwd=116s  val=9s || train_loss=1.7196  train_MacF1=0.2834 | [val] MacF1=0.3409 | WtF1=0.4110 | WA=41.45% | UA=40.74%
+2026-07-13 16:58:08 | meld | INFO:   New best checkpoint saved. Val MacF1=0.3409
+2026-07-13 16:58:27 | meld | INFO:   Batch 50/532 | loss=1.6495 | data=0.0s  fwd=7.4s  bwd=10.9s
+2026-07-13 16:58:45 | meld | INFO:   Batch 100/532 | loss=1.8639 | data=0.0s  fwd=14.8s  bwd=21.8s
+2026-07-13 16:59:03 | meld | INFO:   Batch 150/532 | loss=1.5229 | data=0.1s  fwd=22.2s  bwd=32.8s
+2026-07-13 16:59:22 | meld | INFO:   Batch 200/532 | loss=1.8103 | data=0.1s  fwd=29.6s  bwd=43.7s
+2026-07-13 16:59:40 | meld | INFO:   Batch 250/532 | loss=1.4840 | data=0.1s  fwd=37.0s  bwd=54.6s
+2026-07-13 16:59:58 | meld | INFO:   Batch 300/532 | loss=1.9796 | data=0.1s  fwd=44.3s  bwd=65.4s
+2026-07-13 17:00:16 | meld | INFO:   Batch 350/532 | loss=1.3397 | data=0.1s  fwd=51.7s  bwd=76.3s
+2026-07-13 17:00:35 | meld | INFO:   Batch 400/532 | loss=1.8708 | data=0.1s  fwd=59.1s  bwd=87.2s
+2026-07-13 17:00:53 | meld | INFO:   Batch 450/532 | loss=2.2362 | data=0.1s  fwd=66.6s  bwd=98.1s
+2026-07-13 17:01:12 | meld | INFO:   Batch 500/532 | loss=1.6017 | data=0.1s  fwd=74.0s  bwd=109.1s
+2026-07-13 17:01:32 | meld | INFO:   Epoch   5/30 | total=204s | data=0s  fwd=79s  bwd=116s  val=9s || train_loss=1.7067  train_MacF1=0.3021 | [val] MacF1=0.3561 | WtF1=0.4267 | WA=40.92% | UA=40.48%
+2026-07-13 17:01:33 | meld | INFO:   New best checkpoint saved. Val MacF1=0.3561
+2026-07-13 17:01:51 | meld | INFO:   Batch 50/532 | loss=1.7200 | data=0.1s  fwd=7.4s  bwd=10.9s
+2026-07-13 17:02:09 | meld | INFO:   Batch 100/532 | loss=1.7851 | data=0.1s  fwd=14.8s  bwd=21.8s
+2026-07-13 17:02:28 | meld | INFO:   Batch 150/532 | loss=1.7829 | data=0.1s  fwd=22.2s  bwd=32.7s
+2026-07-13 17:02:46 | meld | INFO:   Batch 200/532 | loss=1.3918 | data=0.1s  fwd=29.7s  bwd=43.7s
+2026-07-13 17:03:04 | meld | INFO:   Batch 250/532 | loss=1.7815 | data=0.1s  fwd=37.0s  bwd=54.5s
+2026-07-13 17:03:23 | meld | INFO:   Batch 300/532 | loss=1.7477 | data=0.1s  fwd=44.4s  bwd=65.4s
+2026-07-13 17:03:41 | meld | INFO:   Batch 350/532 | loss=1.6788 | data=0.1s  fwd=51.8s  bwd=76.3s
+2026-07-13 17:03:59 | meld | INFO:   Batch 400/532 | loss=1.4374 | data=0.1s  fwd=59.2s  bwd=87.2s
+2026-07-13 17:04:18 | meld | INFO:   Batch 450/532 | loss=1.7326 | data=0.1s  fwd=66.7s  bwd=98.2s
+2026-07-13 17:04:36 | meld | INFO:   Batch 500/532 | loss=1.7019 | data=0.1s  fwd=74.0s  bwd=109.0s
+2026-07-13 17:04:56 | meld | INFO:   Epoch   6/30 | total=204s | data=0s  fwd=79s  bwd=116s  val=9s || train_loss=1.6972  train_MacF1=0.3087 | [val] MacF1=0.3336 | WtF1=0.3776 | WA=36.86% | UA=39.34%
+2026-07-13 17:04:56 | meld | INFO:   No improvement. Patience: 1/5
+2026-07-13 17:05:15 | meld | INFO:   Batch 50/532 | loss=1.8201 | data=0.0s  fwd=7.5s  bwd=11.0s
+2026-07-13 17:05:33 | meld | INFO:   Batch 100/532 | loss=1.8048 | data=0.1s  fwd=14.9s  bwd=21.9s
+2026-07-13 17:05:52 | meld | INFO:   Batch 150/532 | loss=1.6625 | data=0.1s  fwd=22.3s  bwd=32.9s
+2026-07-13 17:06:10 | meld | INFO:   Batch 200/532 | loss=1.5118 | data=0.1s  fwd=29.7s  bwd=43.8s
+2026-07-13 17:06:28 | meld | INFO:   Batch 250/532 | loss=1.8786 | data=0.1s  fwd=37.1s  bwd=54.6s
+2026-07-13 17:06:47 | meld | INFO:   Batch 300/532 | loss=1.6325 | data=0.1s  fwd=44.5s  bwd=65.6s
+2026-07-13 17:07:05 | meld | INFO:   Batch 350/532 | loss=1.5795 | data=0.1s  fwd=52.0s  bwd=76.7s
+2026-07-13 17:07:24 | meld | INFO:   Batch 400/532 | loss=1.9669 | data=0.1s  fwd=59.7s  bwd=88.1s
+2026-07-13 17:07:43 | meld | INFO:   Batch 450/532 | loss=1.6069 | data=0.1s  fwd=67.3s  bwd=99.2s
+2026-07-13 17:08:02 | meld | INFO:   Batch 500/532 | loss=1.7297 | data=0.1s  fwd=74.9s  bwd=110.4s
+2026-07-13 17:08:23 | meld | INFO:   Epoch   7/30 | total=206s | data=0s  fwd=80s  bwd=118s  val=9s || train_loss=1.6807  train_MacF1=0.3148 | [val] MacF1=0.3444 | WtF1=0.4039 | WA=40.06% | UA=39.84%
+2026-07-13 17:08:23 | meld | INFO:   No improvement. Patience: 2/5
+2026-07-13 17:08:41 | meld | INFO:   Batch 50/532 | loss=1.5327 | data=0.1s  fwd=7.5s  bwd=11.0s
+2026-07-13 17:09:00 | meld | INFO:   Batch 100/532 | loss=1.5836 | data=0.1s  fwd=14.9s  bwd=21.9s
+2026-07-13 17:09:18 | meld | INFO:   Batch 150/532 | loss=1.9186 | data=0.1s  fwd=22.3s  bwd=32.9s
+2026-07-13 17:09:37 | meld | INFO:   Batch 200/532 | loss=2.1249 | data=0.1s  fwd=29.8s  bwd=43.9s
+2026-07-13 17:09:55 | meld | INFO:   Batch 250/532 | loss=1.6574 | data=0.1s  fwd=37.3s  bwd=54.9s
+2026-07-13 17:10:13 | meld | INFO:   Batch 300/532 | loss=1.7720 | data=0.1s  fwd=44.7s  bwd=65.9s
+2026-07-13 17:10:32 | meld | INFO:   Batch 350/532 | loss=1.6142 | data=0.1s  fwd=52.1s  bwd=76.8s
+2026-07-13 17:10:50 | meld | INFO:   Batch 400/532 | loss=1.7207 | data=0.1s  fwd=59.5s  bwd=87.7s
+2026-07-13 17:11:09 | meld | INFO:   Batch 450/532 | loss=1.4895 | data=0.1s  fwd=67.0s  bwd=98.7s
+2026-07-13 17:11:27 | meld | INFO:   Batch 500/532 | loss=1.6891 | data=0.2s  fwd=74.4s  bwd=109.6s
+2026-07-13 17:11:48 | meld | INFO:   Epoch   8/30 | total=205s | data=0s  fwd=79s  bwd=117s  val=9s || train_loss=1.6769  train_MacF1=0.3254 | [val] MacF1=0.3862 | WtF1=0.4702 | WA=45.51% | UA=41.12%
+2026-07-13 17:11:48 | meld | INFO:   New best checkpoint saved. Val MacF1=0.3862
+2026-07-13 17:12:06 | meld | INFO:   Batch 50/532 | loss=1.7370 | data=0.1s  fwd=7.5s  bwd=11.0s
+2026-07-13 17:12:25 | meld | INFO:   Batch 100/532 | loss=2.0365 | data=0.1s  fwd=14.9s  bwd=22.0s
+2026-07-13 17:12:43 | meld | INFO:   Batch 150/532 | loss=1.7235 | data=0.1s  fwd=22.4s  bwd=33.0s
+2026-07-13 17:13:02 | meld | INFO:   Batch 200/532 | loss=1.8790 | data=0.1s  fwd=30.0s  bwd=44.2s
+2026-07-13 17:13:21 | meld | INFO:   Batch 250/532 | loss=1.6988 | data=0.1s  fwd=37.4s  bwd=55.1s
+2026-07-13 17:13:39 | meld | INFO:   Batch 300/532 | loss=1.6065 | data=0.1s  fwd=44.8s  bwd=66.0s
+2026-07-13 17:13:57 | meld | INFO:   Batch 350/532 | loss=1.6356 | data=0.1s  fwd=52.2s  bwd=76.8s
+2026-07-13 17:14:16 | meld | INFO:   Batch 400/532 | loss=1.7187 | data=0.1s  fwd=59.7s  bwd=87.9s
+2026-07-13 17:14:34 | meld | INFO:   Batch 450/532 | loss=1.5773 | data=0.1s  fwd=67.1s  bwd=98.8s
+2026-07-13 17:14:52 | meld | INFO:   Batch 500/532 | loss=1.4757 | data=0.1s  fwd=74.5s  bwd=109.8s
+2026-07-13 17:15:13 | meld | INFO:   Epoch   9/30 | total=205s | data=0s  fwd=79s  bwd=117s  val=9s || train_loss=1.6703  train_MacF1=0.3327 | [val] MacF1=0.3491 | WtF1=0.3929 | WA=37.39% | UA=40.98%
+2026-07-13 17:15:13 | meld | INFO:   No improvement. Patience: 1/5
+2026-07-13 17:15:31 | meld | INFO:   Batch 50/532 | loss=1.5183 | data=0.0s  fwd=7.4s  bwd=11.0s
+2026-07-13 17:15:50 | meld | INFO:   Batch 100/532 | loss=1.8352 | data=0.1s  fwd=14.9s  bwd=22.1s
+2026-07-13 17:16:09 | meld | INFO:   Batch 150/532 | loss=1.4912 | data=0.1s  fwd=22.5s  bwd=33.2s
+2026-07-13 17:16:27 | meld | INFO:   Batch 200/532 | loss=1.7598 | data=0.1s  fwd=29.8s  bwd=44.1s
+2026-07-13 17:16:45 | meld | INFO:   Batch 250/532 | loss=1.7249 | data=0.1s  fwd=37.3s  bwd=55.1s
+2026-07-13 17:17:04 | meld | INFO:   Batch 300/532 | loss=1.8684 | data=0.1s  fwd=44.9s  bwd=66.4s
+2026-07-13 17:17:23 | meld | INFO:   Batch 350/532 | loss=1.1850 | data=0.1s  fwd=52.3s  bwd=77.3s
+2026-07-13 17:17:41 | meld | INFO:   Batch 400/532 | loss=2.0770 | data=0.1s  fwd=59.6s  bwd=88.1s
+2026-07-13 17:17:59 | meld | INFO:   Batch 450/532 | loss=1.5959 | data=0.1s  fwd=67.1s  bwd=99.0s
+2026-07-13 17:18:18 | meld | INFO:   Batch 500/532 | loss=1.8583 | data=0.1s  fwd=74.5s  bwd=109.9s
+2026-07-13 17:18:38 | meld | INFO:   Epoch  10/30 | total=205s | data=0s  fwd=79s  bwd=117s  val=9s || train_loss=1.6461  train_MacF1=0.3386 | [val] MacF1=0.3524 | WtF1=0.3879 | WA=37.07% | UA=42.25%
+2026-07-13 17:18:38 | meld | INFO:   No improvement. Patience: 2/5
+2026-07-13 17:18:56 | meld | INFO:   Batch 50/532 | loss=1.5423 | data=0.0s  fwd=7.4s  bwd=10.9s
+2026-07-13 17:19:15 | meld | INFO:   Batch 100/532 | loss=1.7008 | data=0.1s  fwd=14.8s  bwd=21.9s
+2026-07-13 17:19:34 | meld | INFO:   Batch 150/532 | loss=1.8416 | data=0.1s  fwd=22.4s  bwd=33.0s
+2026-07-13 17:19:52 | meld | INFO:   Batch 200/532 | loss=1.3523 | data=0.1s  fwd=29.9s  bwd=44.0s
+2026-07-13 17:20:10 | meld | INFO:   Batch 250/532 | loss=1.8363 | data=0.1s  fwd=37.3s  bwd=54.9s
+2026-07-13 17:20:29 | meld | INFO:   Batch 300/532 | loss=1.5934 | data=0.1s  fwd=44.7s  bwd=65.9s
+2026-07-13 17:20:47 | meld | INFO:   Batch 350/532 | loss=1.6069 | data=0.1s  fwd=52.2s  bwd=76.9s
+2026-07-13 17:21:05 | meld | INFO:   Batch 400/532 | loss=2.1548 | data=0.1s  fwd=59.5s  bwd=87.6s
+2026-07-13 17:21:24 | meld | INFO:   Batch 450/532 | loss=1.6489 | data=0.1s  fwd=66.9s  bwd=98.6s
+2026-07-13 17:21:42 | meld | INFO:   Batch 500/532 | loss=1.3699 | data=0.1s  fwd=74.4s  bwd=109.6s
+2026-07-13 17:22:03 | meld | INFO:   Epoch  11/30 | total=205s | data=0s  fwd=79s  bwd=117s  val=9s || train_loss=1.6373  train_MacF1=0.3418 | [val] MacF1=0.3388 | WtF1=0.3347 | WA=35.04% | UA=42.35%
+2026-07-13 17:22:03 | meld | INFO:   No improvement. Patience: 3/5
+2026-07-13 17:22:21 | meld | INFO:   Batch 50/532 | loss=1.6370 | data=0.0s  fwd=7.5s  bwd=11.0s
+2026-07-13 17:22:40 | meld | INFO:   Batch 100/532 | loss=1.6628 | data=0.1s  fwd=14.8s  bwd=21.9s
+2026-07-13 17:22:58 | meld | INFO:   Batch 150/532 | loss=1.1741 | data=0.1s  fwd=22.4s  bwd=33.0s
+2026-07-13 17:23:17 | meld | INFO:   Batch 200/532 | loss=1.3965 | data=0.1s  fwd=29.9s  bwd=44.2s
+2026-07-13 17:23:35 | meld | INFO:   Batch 250/532 | loss=1.4584 | data=0.1s  fwd=37.4s  bwd=55.1s
+2026-07-13 17:23:54 | meld | INFO:   Batch 300/532 | loss=2.1291 | data=0.1s  fwd=44.8s  bwd=66.1s
+2026-07-13 17:24:13 | meld | INFO:   Batch 350/532 | loss=1.8369 | data=0.1s  fwd=52.5s  bwd=77.4s
+2026-07-13 17:24:31 | meld | INFO:   Batch 400/532 | loss=1.4715 | data=0.1s  fwd=59.8s  bwd=88.2s
+2026-07-13 17:24:49 | meld | INFO:   Batch 450/532 | loss=1.4174 | data=0.1s  fwd=67.2s  bwd=99.1s
+2026-07-13 17:25:08 | meld | INFO:   Batch 500/532 | loss=1.5311 | data=0.1s  fwd=74.8s  bwd=110.3s
+2026-07-13 17:25:29 | meld | INFO:   Epoch  12/30 | total=206s | data=0s  fwd=80s  bwd=117s  val=9s || train_loss=1.6308  train_MacF1=0.3530 | [val] MacF1=0.3316 | WtF1=0.3736 | WA=34.83% | UA=39.82%
+2026-07-13 17:25:29 | meld | INFO:   No improvement. Patience: 4/5
+2026-07-13 17:25:48 | meld | INFO:   Batch 50/532 | loss=1.8759 | data=0.0s  fwd=7.6s  bwd=11.2s
+2026-07-13 17:26:07 | meld | INFO:   Batch 100/532 | loss=1.7587 | data=0.1s  fwd=15.1s  bwd=22.4s
+2026-07-13 17:26:25 | meld | INFO:   Batch 150/532 | loss=1.7519 | data=0.1s  fwd=22.6s  bwd=33.3s
+2026-07-13 17:26:44 | meld | INFO:   Batch 200/532 | loss=1.7821 | data=0.1s  fwd=30.2s  bwd=44.6s
+2026-07-13 17:27:03 | meld | INFO:   Batch 250/532 | loss=1.8209 | data=0.1s  fwd=37.7s  bwd=55.7s
+2026-07-13 17:27:21 | meld | INFO:   Batch 300/532 | loss=1.4980 | data=0.1s  fwd=45.2s  bwd=66.8s
+2026-07-13 17:27:40 | meld | INFO:   Batch 350/532 | loss=1.9442 | data=0.1s  fwd=52.8s  bwd=77.9s
+2026-07-13 17:27:59 | meld | INFO:   Batch 400/532 | loss=1.9388 | data=0.1s  fwd=60.2s  bwd=88.9s
+2026-07-13 17:28:17 | meld | INFO:   Batch 450/532 | loss=1.4132 | data=0.1s  fwd=67.7s  bwd=100.0s
+2026-07-13 17:28:36 | meld | INFO:   Batch 500/532 | loss=1.8746 | data=0.1s  fwd=75.3s  bwd=111.2s
+2026-07-13 17:28:57 | meld | INFO:   Epoch  13/30 | total=208s | data=0s  fwd=80s  bwd=118s  val=9s || train_loss=1.6219  train_MacF1=0.3517 | [val] MacF1=0.3723 | WtF1=0.4614 | WA=43.38% | UA=40.30%
+2026-07-13 17:28:57 | meld | INFO:   No improvement. Patience: 5/5
+2026-07-13 17:28:57 | meld | INFO:   Early stopping triggered at epoch 13.
+2026-07-13 17:28:57 | meld | INFO: 
+  Best validation MacF1: 0.3862 at epoch 8
+2026-07-13 17:28:57 | meld | INFO:   Loading best checkpoint from: ./checkpoints\audio\meld_best.pt
+2026-07-13 17:29:29 | meld | INFO: 
+  TEST RESULTS: [test] MacF1=0.3417 | WtF1=0.4752 | WA=44.80% | UA=37.28%
+2026-07-13 17:29:29 | meld | INFO: 
+              precision    recall  f1-score   support
+
+       anger       0.41      0.45      0.43       345
+        fear       0.05      0.10      0.07        50
+         joy       0.30      0.43      0.35       402
+     neutral       0.73      0.47      0.57      1256
+     sadness       0.21      0.41      0.28       208
+
+    accuracy                           0.45      2261
+   macro avg       0.34      0.37      0.34      2261
+weighted avg       0.54      0.45      0.48      2261
+
+2026-07-13 17:29:29 | meld | INFO:   Results saved to: ./outputs\audio
