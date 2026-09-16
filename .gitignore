@@ -171,3 +171,7 @@ desktop.ini
 .idea/
 .vscode/
 *.sublime-*
+
+# Controlled-access IEMOCAP per-utterance results
+iemocap_emotion/agentic_ai/outputs/*.csv
+iemocap_emotion/src/outputs/*/fold*_test_predictions.csv

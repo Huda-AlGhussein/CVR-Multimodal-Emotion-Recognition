@@ -19,6 +19,10 @@ HOW TO USE IT
 
 """
 
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+
 import os
 from dataclasses import dataclass, field
 from typing import List
@@ -42,13 +46,15 @@ class Config:
     #         wav/              ← .wav audio files, one per utterance
     #     Session2/ ...
 
-    iemocap_root: str = r"C:\Users\OpenU\Documents\CVR_multimodal\iemocap_emotion\data_splits\data\IEMOCAP_full_release" # ← MUST EDIT
+    iemocap_root: str = str(
+    PROJECT_ROOT / "data_splits" / "data" / "IEMOCAP_full_release"
+) # ← MUST EDIT
 
     # Where to save processed outputs: split CSVs, checkpoints, logs.
-    output_dir:     str = "./outputs"
-    checkpoint_dir: str = "./checkpoints"
-    log_dir:        str = "./logs"
-    splits_dir:     str = "./data_splits"
+    output_dir:     str = str(PROJECT_ROOT / "outputs")
+    checkpoint_dir: str = str(PROJECT_ROOT / "checkpoints")
+    log_dir:        str = str(PROJECT_ROOT / "logs")
+    splits_dir:     str = str(PROJECT_ROOT / "data_splits")
 
     # ─────────────────────────────────────────────────────────────────────────
     # DATASET SELECTION
@@ -77,9 +83,9 @@ class Config:
     # Expected contents:
     #   train.tar.gz, dev.tar.gz, test.tar.gz   ← inner tarballs
     #   train_sent_emo.csv, dev_sent_emo.csv, test_sent_emo.csv
-    meld_root: str = r"C:\Users\OpenU\Documents\CVR_multimodal\iemocap_emotion\src\MELD.Raw"                
-    meld_audio_dir:  str = "./data_splits/meld_audio"            # extracted .wav files
-    meld_splits_dir: str = "./data_splits/meld"                  # meld_{train,dev,test}.csv
+    meld_root: str = str(PROJECT_ROOT / "src" / "MELD.Raw")             
+    meld_audio_dir:  str = str(PROJECT_ROOT / "data_splits" / "meld_audio")            # extracted .wav files
+    meld_splits_dir: str = str(PROJECT_ROOT / "data_splits" / "meld")                  # meld_{train,dev,test}.csv
 
     # ─────────────────────────────────────────────────────────────────────────
     # MELD LABEL MAP
